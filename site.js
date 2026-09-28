@@ -19,7 +19,7 @@ const CONFIG = {
     { label: "Clients", href: "pages/clients.html" },
     { label: "Events",  href: "pages/events.html" },
   ],
-  navButton: { label: "Get involved", href: "pages/join.html" },
+  navButton: { label: "Join", href: "pages/join.html" },
 
   // Formspree form IDs (the part after formspree.io/f/). See DEPLOY.md.
   // Until these are filled in, submitting a form opens an email instead.
