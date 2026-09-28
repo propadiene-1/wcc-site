@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Events | Wellesley Consulting Club</title>
+<meta name="description" content="Wellesley Consulting Club: a student-run consulting organization.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<!--
+  HOW TO EDIT THIS PAGE
+  - Text: type inside any empty tag, e.g. <p data-ph="Add text"></p>  ->  <p>Your words</p>
+  - Photos: put an image inside an empty photo box:
+      <div class="photo" data-ph="Add photo"></div>
+      ->  <div class="photo"><img src="images/your-photo.jpg" alt="Short description"></div>
+  - Empty boxes show a dashed "Add ..." hint; they disappear once filled.
+  - Header, footer, email and social links are set once in site.js.
+-->
+<div id="site-header"></div>
+<main>
+
+<!--
+  MOVING SECTIONS: each section sits between a "START" and "END" comment.
+  Cut everything from START to END and paste it where you want it.
+  Backgrounds alternate (white / cream) automatically, whatever the order.
+-->
+  <!-- ============ START: Banner ============ -->
+  <section class="banner banner--page">
+    <!-- Optional background photo: <div class="banner-bg"><img src="images/your-photo.jpg" alt=""></div> -->
+    <div class="banner-bg"></div>
+    <div class="ring" data-logo="navy"></div>
+    <div class="wrap">
+      <h1>Events</h1>
+      <p>Events are open to all current Wellesley students and visitors.</p>
+      <div class="actions"><a class="btn btn--accent" href="index.html#mailing-list">Get event updates</a></div>
+    </div>
+  </section>
+  <!-- ============ END: Banner ============ -->
+
+  <!-- ============ START: 2026–2027 Events ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>2026–2027 Academic Year</h2>
+      </div>
+
+      <!-- ----- Up next: your next event -----
+           Image: put a flyer or photo inside the photo box.
+           For a portrait flyer, change "photo" to "photo photo--tall". -->
+      <article class="upcoming">
+        <div class="photo" data-ph="Add event flyer or photo"></div>
+        <div class="upcoming-body">
+          <span class="upcoming-label">Up next</span>
+          <h3>Resume 101</h3>
+          <p>Learn how to tailor your resume for consulting!</p>
+          <dl class="facts">
+            <div><dt>Thursday, Oct. 1 | 7:00pm</dt></div>
+            <div><dt>PNE 139</dt></div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- ----- Earlier this year: click a card to see highlights ----- -->
+      <h3 class="subhead">Earlier this year</h3>
+      <div class="events">
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Workshop">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Workshop</span><span data-ph="Date"></span></div>
+            <h3 data-ph="Event name"></h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Panel">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Panel</span><span data-ph="Date"></span></div>
+            <h3 data-ph="Event name"></h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Social">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Social</span><span data-ph="Date"></span></div>
+            <h3 data-ph="Event name"></h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- ============ END: 2026–2027 Events ============ -->
+
+  <!-- ============ START: Past Events ============ -->
+  <!-- Filter buttons are created automatically from each event's data-category. -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>Past events</h2></div>
+      <div class="filters"></div>
+      <div class="events">
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Workshop">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Workshop</span><span data-ph="Date"></span></div>
+            <h3>Resume workshop</h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Panel">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Panel</span><span data-ph="Date"></span></div>
+            <h3>Alum panel</h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Social">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Social</span><span data-ph="Date"></span></div>
+            <h3>Big &amp; little reveal</h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Workshop">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Workshop</span><span data-ph="Date"></span></div>
+            <h3>Casing 101</h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Panel">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Panel</span><span data-ph="Date"></span></div>
+            <h3>Industry panel</h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+        <!-- Event: copy this whole <article> to add another -->
+        <article class="event" data-category="Social">
+          <button class="event-open">
+            <div class="photo" data-ph="Add cover photo"></div>
+            <div class="event-meta"><span class="tag">Social</span><span data-ph="Date"></span></div>
+            <h3>End-of-semester dinner</h3>
+            <span class="event-more">View highlights</span>
+          </button>
+          <!-- Shown in the popup -->
+          <div class="event-details">
+            <p class="muted" data-ph="Add a short description"></p>
+            <ul class="highlights">
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+              <li data-ph="Highlight"></li>
+            </ul>
+            <div class="gallery">
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+              <div class="photo" data-ph="Add photo"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- ============ END: Past Events ============ -->
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

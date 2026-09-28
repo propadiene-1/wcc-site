@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get involved | Wellesley Consulting Club</title>
+<meta name="description" content="Wellesley Consulting Club: a student-run consulting organization.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<!--
+  HOW TO EDIT THIS PAGE
+  - Text: type inside any empty tag, e.g. <p data-ph="Add text"></p>  ->  <p>Your words</p>
+  - Photos: put an image inside an empty photo box:
+      <div class="photo" data-ph="Add photo"></div>
+      ->  <div class="photo"><img src="images/your-photo.jpg" alt="Short description"></div>
+  - Empty boxes show a dashed "Add ..." hint; they disappear once filled.
+  - Header, footer, email and social links are set once in site.js.
+-->
+<div id="site-header"></div>
+<main>
+
+<!--
+  MOVING SECTIONS: each section sits between a "START" and "END" comment.
+  Cut everything from START to END and paste it where you want it.
+  Backgrounds alternate (white / cream) automatically, whatever the order.
+-->
+
+  <!-- ============ START: Banner ============ -->
+  <section class="banner banner--page">
+    <!-- Optional background photo: <div class="banner-bg"><img src="images/your-photo.jpg" alt=""></div> -->
+    <div class="banner-bg"></div>
+    <div class="ring" data-logo="navy"></div>
+    <div class="wrap">
+      <h1>Get Involved</h1>
+      <p>Thanks for your interest in WCC! See below for ways to stay in touch.</p>
+    </div>
+  </section>
+  <!-- ============ END: Banner ============ -->
+
+  <!-- ============ START: How to Get Involved ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How to get involved</h2>
+      </div>
+      <ul class="bullets">
+        <li><a href="index.html#mailing-list">Join our mailing list</a></li>
+        <li><a href="events.html">Attend our events</a><!--span class="muted" data-ph="Add a short line"></span--></li>
+        <li><strong>Interested in e-board or case team?</strong><span class="muted">Join our mailing list to hear about new position openings.</span></li>
+      </ul>
+    </div>
+  </section>
+  <!-- ============ END: How to Get Involved ============ -->
+
+  <!-- ============ START: Contact ============ -->
+  <!-- ===== Contact form =====
+       Connected through Formspree: paste your form ID into site.js
+       (forms: { ... }). See DEPLOY.md. -->
+  <section class="section" id="contact">
+    <div class="wrap contact">
+      <div>
+        <div class="section-head">
+          <h2>Contact us</h2>
+          <p class="muted" data-ph="Add a line inviting questions"></p>
+        </div>
+        <form class="form" data-form="Website message" data-success="Thanks, your message was sent." data-formspree="contact" method="POST">
+          <input type="text" name="_gotcha" hidden tabindex="-1" autocomplete="off">
+          <div class="form-row">
+            <label class="field">Name<input name="name" required autocomplete="name"></label>
+            <label class="field">Email<input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <label class="field">I'm a…
+            <select name="topic"><option>Student interested in joining</option><option>Prospective client</option><option>Alum</option><option>Other</option></select>
+          </label>
+          <label class="field">Message<textarea name="message" required></textarea></label>
+          <button class="btn btn--accent" type="submit">Send message</button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+      <div class="contact-details">
+        <div class="photo" data-ph="Add photo"></div>
+        <div><h3>Email</h3><a class="text-link" data-email href="#"></a></div>
+        <div><h3>Follow us</h3><div class="actions" style="gap:1.25rem" data-socials></div></div>
+      </div>
+    </div>
+  </section>
+  <!-- ============ END: Contact ============ -->
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
