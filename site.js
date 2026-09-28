@@ -15,11 +15,11 @@ const CONFIG = {
   ],
   nav: [
     { label: "Home",    href: "index.html" },
-    { label: "About",   href: "about.html" },
-    { label: "Clients", href: "clients.html" },
-    { label: "Events",  href: "events.html" },
+    { label: "About",   href: "pages/about.html" },
+    { label: "Clients", href: "pages/clients.html" },
+    { label: "Events",  href: "pages/events.html" },
   ],
-  navButton: { label: "Get involved", href: "join.html" },
+  navButton: { label: "Get involved", href: "pages/join.html" },
 
   // Formspree form IDs (the part after formspree.io/f/). See DEPLOY.md.
   // Until these are filled in, submitting a form opens an email instead.
@@ -46,6 +46,11 @@ const CONFIG = {
   //showDesignPanel: true,    // set to false before going live
   showPlaceholders: true,   // set to false to hide any dashed boxes you haven't filled
 };
+
+// The site's main folder, worked out from where site.js lives, so links
+// and images work from both index.html and the pages/ folder.
+const ROOT = document.currentScript.src.replace(/site\.js(\?.*)?$/, "");
+const url = p => /^(https?:|mailto:|#|\/)/.test(p) ? p : ROOT + p;
 
 /* 2. LOGO LOADER ---------------------------------------------------- */
 // Built-in fallback drawing, used only if no logo file is set.
@@ -80,7 +85,7 @@ const logoPromise = (async () => {
   const L = CONFIG.logo || {};
   if (!L.file) { logoSVG = builtInLogo(); return; }
   if (L.recolor !== false && /\.svg$/i.test(L.file)) {
-    try { logoSVG = recolorSVG(await (await fetch(L.file)).text()); } catch { /* opened as a local file: fall back to <img> */ }
+    try { logoSVG = recolorSVG(await (await fetch(url(L.file))).text()); } catch { /* opened as a local file: fall back to <img> */ }
   }
 })();
 
@@ -90,7 +95,7 @@ function paintLogo(el) {
   const place = el.dataset.logo || "navy";
   if (logoSVG) { el.innerHTML = logoSVG; return; }
   const src = (place === "light" && L.fileOnLight) || L.file;
-  el.innerHTML = `<img src="${src}" alt="">`;
+  el.innerHTML = `<img src="${url(src)}" alt="">`;
 }
 
 /* ===================================================================
@@ -107,10 +112,10 @@ if (!CONFIG.showPlaceholders) document.documentElement.classList.add("live");
 /* Header */
 const headerEl = document.getElementById("site-header");
 if (headerEl) {
-  const a = (n, cls = "") => `<a ${cls} href="${esc(n.href)}" ${isCurrent(n.href) ? 'aria-current="page"' : ""}>${esc(n.label)}</a>`;
+  const a = (n, cls = "") => `<a ${cls} href="${esc(url(n.href))}" ${isCurrent(n.href) ? 'aria-current="page"' : ""}>${esc(n.label)}</a>`;
   headerEl.outerHTML = `
   <header class="header"><div class="wrap">
-    <a class="brand" href="index.html"><span class="brand-mark brand-mark--${esc((CONFIG.logo || {}).headerStyle || "badge")}" data-logo="${(CONFIG.logo || {}).headerStyle === "plain" ? "light" : "navy"}"></span>
+    <a class="brand" href="${url("index.html")}"><span class="brand-mark brand-mark--${esc((CONFIG.logo || {}).headerStyle || "badge")}" data-logo="${(CONFIG.logo || {}).headerStyle === "plain" ? "light" : "navy"}"></span>
       <span class="brand-name"><span class="name-full">${esc(CONFIG.name)}</span><span class="name-short">${esc(CONFIG.shortName)}</span></span></a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
@@ -127,7 +132,7 @@ if (footerEl) {
   footerEl.outerHTML = `
   <footer class="footer"><div class="wrap">
     <div class="footer-top">
-      <a class="brand" href="index.html"><span class="brand-mark" data-logo="navy"></span><span class="brand-name">${esc(CONFIG.name)}</span></a>
+      <a class="brand" href="${url("index.html")}"><span class="brand-mark" data-logo="navy"></span><span class="brand-name">${esc(CONFIG.name)}</span></a>
       <div class="footer-links"><a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a>${CONFIG.socials.map(s => `<a href="${esc(s.href)}">${esc(s.label)}</a>`).join("")}</div>
     </div>
     <div class="footer-bottom"><span>© ${new Date().getFullYear()} ${esc(CONFIG.name)}</span></div>

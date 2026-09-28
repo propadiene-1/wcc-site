@@ -2,8 +2,8 @@
 <!-- Replace yourdomain.com with your real domain (also in robots.txt) -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://yourdomain.com/</loc></url>
-  <url><loc>https://yourdomain.com/about</loc></url>
-  <url><loc>https://yourdomain.com/clients</loc></url>
-  <url><loc>https://yourdomain.com/events</loc></url>
-  <url><loc>https://yourdomain.com/join</loc></url>
+  <url><loc>https://yourdomain.com/pages/about</loc></url>
+  <url><loc>https://yourdomain.com/pages/clients</loc></url>
+  <url><loc>https://yourdomain.com/pages/events</loc></url>
+  <url><loc>https://yourdomain.com/pages/join</loc></url>
 </urlset>
