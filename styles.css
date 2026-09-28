@@ -173,7 +173,8 @@ html.live [data-ph]:empty { display: none; }
 .banner--hero .wrap { padding-top: clamp(5rem, 12vw, 9rem); padding-bottom: clamp(5rem, 12vw, 9rem); }
 .banner--page .wrap { padding-top: clamp(3.5rem, 8vw, 5.5rem); padding-bottom: clamp(3.5rem, 8vw, 5.5rem); }
 .banner h1 { font-weight: 300; }
-.banner--hero h1 { font-size: clamp(2.6rem, 6.2vw, 4.75rem); max-width: 16ch; }
+.banner--hero h1 { font-size: clamp(2.4rem, 5.4vw, 4.5rem); max-width: none; }
+.banner--hero h2 { color: var(--accent); }
 .banner--page h1 { font-size: clamp(2.3rem, 5vw, 3.5rem); }
 .banner .lede { max-width: 34rem; width: 100%; font-size: 1.15rem; opacity: .85; }
 .banner .actions { margin-top: .75rem; }
