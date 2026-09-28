@@ -135,6 +135,12 @@ html.live [data-ph]:empty { display: none; }
   font-size: .8rem; padding: .3rem .7rem; border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--secondary) 45%, transparent); color: var(--muted);
 }
+.up-next {
+  background-color: var(--accent);
+  border: 0px;
+  color: black;
+  font-weight:bold;
+}
 
 /* ---------- Header ---------- */
 .header {
